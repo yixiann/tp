@@ -45,6 +45,7 @@ public class TagCommand extends Command {
         }
         itemTags.add(tag);
         Item newTagSetItem = Item.createItemWithTags(itemToTag, itemTags);
+        model.setItem(itemToTag, newTagSetItem);
         model.updateFilteredItemList(Model.PREDICATE_SHOW_ALL_ITEMS);
 
         return CommandResult.from(

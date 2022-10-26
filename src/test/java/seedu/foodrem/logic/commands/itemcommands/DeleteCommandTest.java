@@ -17,8 +17,8 @@ import seedu.foodrem.model.Model;
 import seedu.foodrem.model.ModelManager;
 import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
-import seedu.foodrem.viewmodels.ItemWithMessage;
 import seedu.foodrem.testutil.TypicalFoodRem;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for

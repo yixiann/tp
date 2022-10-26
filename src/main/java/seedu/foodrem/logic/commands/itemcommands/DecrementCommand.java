@@ -13,7 +13,7 @@ import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.item.ItemQuantity;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * Increments the quantity of an item by a specified amount.

@@ -1,10 +1,10 @@
-package seedu.foodrem.views.item;
+package seedu.foodrem.views;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.VBox;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * A view of an {@code ItemWithMessage}. This can be displayed.

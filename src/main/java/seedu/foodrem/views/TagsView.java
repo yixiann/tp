@@ -1,4 +1,4 @@
-package seedu.foodrem.views.tag;
+package seedu.foodrem.views;
 
 import java.util.ArrayList;
 import java.util.Comparator;

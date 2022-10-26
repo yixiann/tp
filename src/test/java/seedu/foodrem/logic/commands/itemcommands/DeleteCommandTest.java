@@ -17,7 +17,7 @@ import seedu.foodrem.model.Model;
 import seedu.foodrem.model.ModelManager;
 import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 import seedu.foodrem.testutil.TypicalFoodRem;
 
 /**

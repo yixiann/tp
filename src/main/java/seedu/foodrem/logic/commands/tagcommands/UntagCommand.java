@@ -10,7 +10,7 @@ import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * Untags an item with a Tag.

@@ -4,13 +4,9 @@ import static java.util.Objects.requireNonNull;
 
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.ui.ResultDisplay;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
-import seedu.foodrem.viewmodels.tag.TagToRename;
-import seedu.foodrem.viewmodels.tag.TagsWithMessage;
-import seedu.foodrem.views.item.ItemView;
-import seedu.foodrem.views.item.ItemWithMessageView;
-import seedu.foodrem.views.tag.TagToRenameView;
-import seedu.foodrem.views.tag.TagsWithMessageView;
+import seedu.foodrem.viewmodels.ItemWithMessage;
+import seedu.foodrem.viewmodels.TagToRename;
+import seedu.foodrem.viewmodels.TagsWithMessage;
 
 /**
  * A UI view manager to handle view updates to a result display.

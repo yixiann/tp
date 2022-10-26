@@ -24,7 +24,7 @@ import seedu.foodrem.model.ReadOnlyUserPrefs;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.tag.Tag;
 import seedu.foodrem.testutil.ItemBuilder;
-import seedu.foodrem.viewmodels.item.ItemWithMessage;
+import seedu.foodrem.viewmodels.ItemWithMessage;
 
 public class NewCommandTest {
     private static final String EXPECTED_SUCCESS_MESSAGE = "New item added as follows:";

@@ -1,4 +1,4 @@
-package seedu.foodrem.views.item;
+package seedu.foodrem.views;
 
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -9,7 +9,6 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import seedu.foodrem.model.item.Item;
-import seedu.foodrem.views.tag.TagsView;
 
 /**
  * A view of an {@code Item}. This can be displayed.

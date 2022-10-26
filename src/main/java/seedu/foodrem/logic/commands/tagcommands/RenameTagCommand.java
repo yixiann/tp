@@ -8,7 +8,7 @@ import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.viewmodels.tag.TagToRename;
+import seedu.foodrem.viewmodels.TagToRename;
 
 /**
  * Renames an existing tag in FoodRem.

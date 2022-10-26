@@ -10,7 +10,7 @@ import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.viewmodels.tag.TagsWithMessage;
+import seedu.foodrem.viewmodels.TagsWithMessage;
 
 /**
  * Adds a tag to FoodRem.

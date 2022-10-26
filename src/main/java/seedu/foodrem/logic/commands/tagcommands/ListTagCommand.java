@@ -6,7 +6,7 @@ import static seedu.foodrem.commons.enums.CommandType.LIST_TAG_COMMAND;
 import seedu.foodrem.logic.commands.Command;
 import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.model.Model;
-import seedu.foodrem.viewmodels.tag.TagsWithMessage;
+import seedu.foodrem.viewmodels.TagsWithMessage;
 
 /**
  * Lists all the tags available

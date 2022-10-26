@@ -1,11 +1,11 @@
-package seedu.foodrem.views.tag;
+package seedu.foodrem.views;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import seedu.foodrem.viewmodels.tag.TagToRename;
+import seedu.foodrem.viewmodels.TagToRename;
 
 /**
  * A view of an {@code TagToRename}. This can be displayed.

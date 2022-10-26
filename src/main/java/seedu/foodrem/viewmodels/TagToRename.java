@@ -1,4 +1,4 @@
-package seedu.foodrem.viewmodels.tag;
+package seedu.foodrem.viewmodels;
 
 import java.util.Objects;
 

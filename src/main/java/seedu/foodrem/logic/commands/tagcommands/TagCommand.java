@@ -19,8 +19,6 @@ import seedu.foodrem.viewmodels.ItemWithMessage;
  * Tags an item with a Tag.
  */
 public class TagCommand extends Command {
-    // TODO: Test this command
-    private static final String MESSAGE_SUCCESS = "Item tagged successfully.";
     private static final String ERROR_DUPLICATE = "This item has already been tagged with this tag";
     private static final String ERROR_NOT_FOUND_TAG = "This tag does not exist";
     private static final String ERROR_NOT_FOUND_ITEM = "The item index does not exist";
@@ -38,39 +36,19 @@ public class TagCommand extends Command {
         this.tag = new Tag(tagName);
     }
 
-    /**
-     * Creates and returns a {@code Item} with the tagSet of {@code itemToEdit}
-     * edited
-     */
-    private static Item createTaggedItem(Item itemToTag, Tag tag) {
-        assert itemToTag != null;
-
-        itemToTag.addItemTag(tag);
-        Set<Tag> newTagSet = itemToTag.getTagSet();
-
-        return new Item(itemToTag.getName(),
-                itemToTag.getQuantity(),
-                itemToTag.getUnit(),
-                itemToTag.getBoughtDate(),
-                itemToTag.getExpiryDate(),
-                itemToTag.getPrice(),
-                itemToTag.getRemarks(),
-                newTagSet);
-    }
-
     @Override
     public CommandResult<ItemWithMessage> execute(Model model) throws CommandException {
         Item itemToTag = validateAndGetTargetItem(model, tag, index);
-        if (itemToTag.containsTag(tag)) {
+        Set<Tag> itemTags = itemToTag.getTagSet();
+        if (itemTags.contains(tag)) {
             throw new CommandException(ERROR_DUPLICATE);
         }
-
-        Item newTagSetItem = createTaggedItem(itemToTag, tag);
-
-        model.setItem(itemToTag, newTagSetItem);
+        itemTags.add(tag);
+        Item newTagSetItem = Item.createItemWithTags(itemToTag, itemTags);
         model.updateFilteredItemList(Model.PREDICATE_SHOW_ALL_ITEMS);
 
-        return CommandResult.from(new ItemWithMessage(newTagSetItem, MESSAGE_SUCCESS));
+        return CommandResult.from(
+                new ItemWithMessage(newTagSetItem, "Item tagged successfully. View updated item below:"));
     }
 
     static Item validateAndGetTargetItem(Model model, Tag tag, Index index) throws CommandException {

@@ -43,6 +43,8 @@ public class MainApp extends Application {
     private Storage storage;
     private Model model;
 
+    private String initialMessage = "Welcome to FoodRem!";
+
     @Override
     public void init() throws Exception {
         logger.info("=============================[ Initializing FoodRem ]===========================");
@@ -70,19 +72,21 @@ public class MainApp extends Application {
      * or an empty foodRem will be used instead if errors occur when reading {@code storage}'s foodRem.
      */
     private Model initModelManager(Storage storage, ReadOnlyUserPrefs userPrefs) {
-        Optional<ReadOnlyFoodRem> foodRemOptional;
         ReadOnlyFoodRem initialData;
         try {
-            foodRemOptional = storage.readFoodRem();
+            Optional<ReadOnlyFoodRem> foodRemOptional = storage.readFoodRem();
             if (foodRemOptional.isEmpty()) {
-                logger.info("Data file not found. Will be starting with a sample FoodRem");
+                initialMessage = "Data file not found. Will be starting with a sample FoodRem.";
+                logger.info(initialMessage);
             }
             initialData = foodRemOptional.orElseGet(SampleDataUtil::getSampleFoodRem);
         } catch (DataConversionException e) {
-            logger.warning("Data file not in the correct format. Will be starting with an empty FoodRem");
+            initialMessage = "Data file not in the correct format. Will be starting with an empty FoodRem.";
+            logger.warning(initialMessage);
             initialData = new FoodRem();
         } catch (IOException e) {
-            logger.warning("Problem while reading from the file. Will be starting with an empty FoodRem");
+            initialMessage = "Problem while reading from the file. Will be starting with an empty FoodRem";
+            logger.warning(initialMessage);
             initialData = new FoodRem();
         }
 
@@ -164,7 +168,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         logger.info("Starting FoodRem " + MainApp.VERSION);
-        ui.start(primaryStage);
+        ui.start(primaryStage, initialMessage);
     }
 
     @Override

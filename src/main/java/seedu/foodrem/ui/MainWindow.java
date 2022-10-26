@@ -18,6 +18,7 @@ import seedu.foodrem.logic.Logic;
 import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.logic.commands.generalcommands.HelpCommand;
+import seedu.foodrem.views.StringView;
 import seedu.foodrem.views.UiView;
 
 /**
@@ -41,15 +42,18 @@ public class MainWindow extends UiPart<Stage> {
     @FXML private StackPane resultDisplayPlaceholder;
     @FXML private StackPane statusbarPlaceholder;
 
+    private final String initialMessage;
+
     /**
      * Creates a {@code MainWindow} with the given {@code Stage} and {@code Logic}.
      */
-    public MainWindow(Stage primaryStage, Logic logic) {
+    public MainWindow(Stage primaryStage, Logic logic, String message) {
         super("MainWindow.fxml", primaryStage);
 
         // Set dependencies
         this.primaryStage = primaryStage;
         this.logic = logic;
+        this.initialMessage = message;
 
         // Configure the UI
         setWindowDefaultSize(logic.getGuiSettings());
@@ -107,6 +111,7 @@ public class MainWindow extends UiPart<Stage> {
 
         resultDisplay = new ResultDisplay();
         uiView = new UiView(resultDisplay);
+        resultDisplay.place(StringView.from(initialMessage));
         place(resultDisplayPlaceholder, resultDisplay);
 
         place(statusbarPlaceholder, new StatusBarFooter(logic.getFoodRemFilePath()));

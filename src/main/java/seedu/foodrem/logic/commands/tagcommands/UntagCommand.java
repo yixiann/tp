@@ -3,6 +3,8 @@ package seedu.foodrem.logic.commands.tagcommands;
 import static java.util.Objects.requireNonNull;
 import static seedu.foodrem.commons.enums.CommandType.UNTAG_COMMAND;
 
+import java.util.Set;
+
 import seedu.foodrem.commons.core.index.Index;
 import seedu.foodrem.logic.commands.Command;
 import seedu.foodrem.logic.commands.CommandResult;
@@ -16,8 +18,6 @@ import seedu.foodrem.viewmodels.ItemWithMessage;
  * Untags an item with a Tag.
  */
 public class UntagCommand extends Command {
-    // TODO: Test this command
-    private static final String MESSAGE_SUCCESS = "Item untagged successfully.";
     private static final String ERROR_ITEM_DOES_NOT_CONTAIN_TAG = "This item is not tagged with this tag";
 
     private final Index index;
@@ -36,16 +36,17 @@ public class UntagCommand extends Command {
     @Override
     public CommandResult<ItemWithMessage> execute(Model model) throws CommandException {
         Item itemToUntag = TagCommand.validateAndGetTargetItem(model, tag, index);
-        if (!itemToUntag.containsTag(tag)) {
+        Set<Tag> itemTags = itemToUntag.getTagSet();
+        if (!itemTags.contains(tag)) {
             throw new CommandException(ERROR_ITEM_DOES_NOT_CONTAIN_TAG);
         }
-
-        Item newTagSetItem = Item.createUntaggedItem(itemToUntag, tag);
-
+        itemTags.remove(tag);
+        Item newTagSetItem = Item.createItemWithTags(itemToUntag, itemTags);
         model.setItem(itemToUntag, newTagSetItem);
         model.updateFilteredItemList(Model.PREDICATE_SHOW_ALL_ITEMS);
 
-        return CommandResult.from(new ItemWithMessage(newTagSetItem, MESSAGE_SUCCESS));
+        return CommandResult.from(
+                new ItemWithMessage(newTagSetItem, "Item untagged successfully. View updated item below:"));
     }
 
     public static String getUsage() {

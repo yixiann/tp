@@ -17,8 +17,8 @@ import seedu.foodrem.model.Model;
 import seedu.foodrem.model.ModelManager;
 import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 import seedu.foodrem.testutil.TypicalFoodRem;
-import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for
@@ -99,6 +99,7 @@ public class DeleteCommandTest {
      */
     private void showNoItem(Model model) {
         model.updateFilteredItemList(p -> false);
+
         assertTrue(model.getCurrentList().isEmpty());
     }
 }

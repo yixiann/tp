@@ -24,8 +24,8 @@ import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.testutil.EditItemDescriptorBuilder;
 import seedu.foodrem.testutil.ItemBuilder;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 import seedu.foodrem.testutil.TypicalFoodRem;
-import seedu.foodrem.viewmodels.ItemWithMessage;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for EditCommand.

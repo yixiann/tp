@@ -1,4 +1,4 @@
-package seedu.foodrem.viewmodels;
+package seedu.foodrem.viewmodels.item;
 
 import seedu.foodrem.model.item.Item;
 

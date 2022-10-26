@@ -10,7 +10,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.text.TextAlignment;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.views.ItemView;
+import seedu.foodrem.views.item.ItemView;
 
 /**
  * A UI component that displays information of a {@code Item}.

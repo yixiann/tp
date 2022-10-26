@@ -3,17 +3,20 @@ package seedu.foodrem.logic.commands.tagcommands;
 import static java.util.Objects.requireNonNull;
 import static seedu.foodrem.commons.enums.CommandType.NEW_TAG_COMMAND;
 
+import java.util.List;
+
 import seedu.foodrem.logic.commands.Command;
 import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.tag.Tag;
+import seedu.foodrem.viewmodels.tag.TagsWithMessage;
 
 /**
  * Adds a tag to FoodRem.
  */
 public class NewTagCommand extends Command {
-    private static final String MESSAGE_SUCCESS = "New tag added: %1$s";
+    private static final String MESSAGE_SUCCESS = "New tag added:";
     private static final String ERROR_DUPLICATE = "This tag already exists in FoodRem";
 
     private final Tag toAdd;
@@ -27,7 +30,7 @@ public class NewTagCommand extends Command {
     }
 
     @Override
-    public CommandResult<String> execute(Model model) throws CommandException {
+    public CommandResult<TagsWithMessage> execute(Model model) throws CommandException {
         requireNonNull(model);
 
         if (model.hasTag(toAdd)) {
@@ -35,7 +38,7 @@ public class NewTagCommand extends Command {
         }
 
         model.addTag(toAdd);
-        return CommandResult.from(String.format(MESSAGE_SUCCESS, toAdd));
+        return CommandResult.from(new TagsWithMessage(List.of(toAdd), MESSAGE_SUCCESS));
     }
 
     public static String getUsage() {

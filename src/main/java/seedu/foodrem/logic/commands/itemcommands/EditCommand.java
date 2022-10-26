@@ -23,7 +23,7 @@ import seedu.foodrem.model.item.ItemQuantity;
 import seedu.foodrem.model.item.ItemRemark;
 import seedu.foodrem.model.item.ItemUnit;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.viewmodels.ItemWithMessage;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 
 /**
  * Edits the details of an existing item in FoodRem.

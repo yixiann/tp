@@ -10,12 +10,14 @@ import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.tag.Tag;
-import seedu.foodrem.viewmodels.ItemWithMessage;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 
 /**
  * Untags an item with a Tag.
  */
 public class UntagCommand extends Command {
+    // TODO: Test this command
+    private static final String MESSAGE_SUCCESS = "Item untagged successfully.";
     private static final String ERROR_ITEM_DOES_NOT_CONTAIN_TAG = "This item is not tagged with this tag";
 
     private final Index index;
@@ -39,10 +41,11 @@ public class UntagCommand extends Command {
         }
 
         Item newTagSetItem = Item.createUntaggedItem(itemToUntag, tag);
-        model.setItem(itemToUntag, newTagSetItem);
 
-        return CommandResult.from(
-                new ItemWithMessage(newTagSetItem, "Item untagged successfully. View updated item below:"));
+        model.setItem(itemToUntag, newTagSetItem);
+        model.updateFilteredItemList(Model.PREDICATE_SHOW_ALL_ITEMS);
+
+        return CommandResult.from(new ItemWithMessage(newTagSetItem, MESSAGE_SUCCESS));
     }
 
     public static String getUsage() {

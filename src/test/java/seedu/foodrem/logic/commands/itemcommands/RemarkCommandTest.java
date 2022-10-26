@@ -24,7 +24,7 @@ import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.model.item.ItemRemark;
 import seedu.foodrem.testutil.ItemBuilder;
-import seedu.foodrem.viewmodels.ItemWithMessage;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 
 /**
  * Contains unit tests for RemarkCommand.

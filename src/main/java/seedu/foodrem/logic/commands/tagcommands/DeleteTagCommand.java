@@ -3,17 +3,20 @@ package seedu.foodrem.logic.commands.tagcommands;
 import static java.util.Objects.requireNonNull;
 import static seedu.foodrem.commons.enums.CommandType.DELETE_TAG_COMMAND;
 
+import java.util.List;
+
 import seedu.foodrem.logic.commands.Command;
 import seedu.foodrem.logic.commands.CommandResult;
 import seedu.foodrem.logic.commands.exceptions.CommandException;
 import seedu.foodrem.model.Model;
 import seedu.foodrem.model.tag.Tag;
+import seedu.foodrem.viewmodels.tag.TagsWithMessage;
 
 /**
  * Deletes an existing tag in FoodRem.
  */
 public class DeleteTagCommand extends Command {
-    private static final String MESSAGE_SUCCESS = "Tag deleted: %1$s";
+    private static final String MESSAGE_SUCCESS = "Tag deleted:";
     private static final String ERROR_NOT_FOUND = "This tag does not exist in the FoodRem";
 
     private final Tag toDelete;
@@ -27,7 +30,7 @@ public class DeleteTagCommand extends Command {
     }
 
     @Override
-    public CommandResult<String> execute(Model model) throws CommandException {
+    public CommandResult<TagsWithMessage> execute(Model model) throws CommandException {
         requireNonNull(model);
 
         if (!model.hasTag(toDelete)) {
@@ -35,7 +38,8 @@ public class DeleteTagCommand extends Command {
         }
 
         model.deleteTag(toDelete);
-        return CommandResult.from(String.format(MESSAGE_SUCCESS, toDelete));
+        model.updateFilteredItemList(Model.PREDICATE_SHOW_ALL_ITEMS);
+        return CommandResult.from(new TagsWithMessage(List.of(toDelete), MESSAGE_SUCCESS));
     }
 
     public static String getUsage() {

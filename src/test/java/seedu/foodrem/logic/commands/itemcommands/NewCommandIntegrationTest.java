@@ -13,7 +13,7 @@ import seedu.foodrem.model.ModelManager;
 import seedu.foodrem.model.UserPrefs;
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.testutil.ItemBuilder;
-import seedu.foodrem.viewmodels.ItemWithMessage;
+import seedu.foodrem.viewmodels.item.ItemWithMessage;
 
 /**
  * Contains integration tests (interaction with the Model) for {@code AddCommand}.

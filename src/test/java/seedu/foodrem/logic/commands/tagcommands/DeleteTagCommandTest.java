@@ -35,7 +35,7 @@ public class DeleteTagCommandTest {
         Tag tagToDelete = model.getFilteredTagList().get(INDEX_FIRST_ITEM.getZeroBased());
         DeleteTagCommand deleteTagCommand = new DeleteTagCommand(tagToDelete);
 
-        TagsWithMessage expectedMessage = new TagsWithMessage(List.of(tagToDelete) ,EXPECTED_FORMAT_SUCCESS);
+        TagsWithMessage expectedMessage = new TagsWithMessage(List.of(tagToDelete), EXPECTED_FORMAT_SUCCESS);
 
         ModelManager expectedModel = new ModelManager(model.getFoodRem(), new UserPrefs());
         expectedModel.deleteTag(tagToDelete);

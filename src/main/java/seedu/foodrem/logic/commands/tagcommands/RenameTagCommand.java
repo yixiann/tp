@@ -14,10 +14,6 @@ import seedu.foodrem.viewmodels.TagToRename;
  * Renames an existing tag in FoodRem.
  */
 public class RenameTagCommand extends Command {
-    private static final String MESSAGE_SUCCESS = "Tag renamed:";
-    private static final String ERROR_NOT_FOUND = "This tag does not exist in the FoodRem.";
-    private static final String ERROR_DUPLICATE = "This tag name already exists in the FoodRem.";
-
     private final Tag originalTag;
     private final Tag renamedTag;
 
@@ -44,7 +40,7 @@ public class RenameTagCommand extends Command {
         }
 
         model.setTag(originalTag, renamedTag);
-        return CommandResult.from(new TagToRename(originalTag, renamedTag, MESSAGE_SUCCESS));
+        return CommandResult.from(new TagToRename(originalTag, renamedTag, "Tag renamed:"));
     }
 
     public static String getUsage() {

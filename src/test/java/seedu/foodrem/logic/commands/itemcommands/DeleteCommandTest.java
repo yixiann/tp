@@ -99,6 +99,7 @@ public class DeleteCommandTest {
      */
     private void showNoItem(Model model) {
         model.updateFilteredItemList(p -> false);
+
         assertTrue(model.getCurrentList().isEmpty());
     }
 }

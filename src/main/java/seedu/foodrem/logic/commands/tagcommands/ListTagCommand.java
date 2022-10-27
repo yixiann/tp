@@ -12,7 +12,7 @@ import seedu.foodrem.viewmodels.TagsWithMessage;
  * Lists all the tags available
  */
 public class ListTagCommand extends Command {
-    private static final String MESSAGE_SUCCESS = "Listed all tags:\n";
+    private static final String MESSAGE_SUCCESS = "Listed all tags:";
 
     @Override
     public CommandResult<TagsWithMessage> execute(Model model) {

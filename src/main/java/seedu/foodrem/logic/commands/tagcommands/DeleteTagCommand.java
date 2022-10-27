@@ -17,7 +17,6 @@ import seedu.foodrem.viewmodels.TagsWithMessage;
  */
 public class DeleteTagCommand extends Command {
     private static final String MESSAGE_SUCCESS = "Tag deleted:";
-    private static final String ERROR_NOT_FOUND = "This tag does not exist in the FoodRem";
 
     private final Tag toDelete;
 

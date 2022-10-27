@@ -14,11 +14,16 @@ import seedu.foodrem.viewmodels.TagToRename;
  * Renames an existing tag in FoodRem.
  */
 public class RenameTagCommand extends Command {
+    private static final String MESSAGE_SUCCESS = "Tag renamed:";
+
     private final Tag originalTag;
     private final Tag renamedTag;
 
     /**
-     * Creates an AddTagCommand to add the specified {@code Tag}
+     * Creates a RenameTagCommand to rename a specified {@code Tag}
+     *
+     * @param originalTag the tag to be renamed
+     * @param renamedTag the new tag
      */
     public RenameTagCommand(Tag originalTag, Tag renamedTag) {
         requireNonNull(originalTag);
@@ -40,7 +45,7 @@ public class RenameTagCommand extends Command {
         }
 
         model.setTag(originalTag, renamedTag);
-        return CommandResult.from(new TagToRename(originalTag, renamedTag, "Tag renamed:"));
+        return CommandResult.from(new TagToRename(originalTag, renamedTag, MESSAGE_SUCCESS));
     }
 
     public static String getUsage() {

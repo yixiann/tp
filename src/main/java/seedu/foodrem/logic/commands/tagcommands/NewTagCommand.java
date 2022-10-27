@@ -17,12 +17,11 @@ import seedu.foodrem.viewmodels.TagsWithMessage;
  */
 public class NewTagCommand extends Command {
     private static final String MESSAGE_SUCCESS = "New tag added:";
-    private static final String ERROR_DUPLICATE = "This tag already exists in FoodRem";
 
     private final Tag toAdd;
 
     /**
-     * Creates an AddTagCommand to add the specified {@code Tag}
+     * Creates a NewTagCommand to add the specified {@code Tag}
      */
     public NewTagCommand(Tag tag) {
         requireNonNull(tag);

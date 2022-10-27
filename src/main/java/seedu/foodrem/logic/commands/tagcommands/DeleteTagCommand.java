@@ -22,6 +22,8 @@ public class DeleteTagCommand extends Command {
 
     /**
      * Creates an DeleteTagCommand to delete the specified {@code Tag}
+     *
+     * @param tagToDelete the tag that will be deleted from foodRem.
      */
     public DeleteTagCommand(Tag tagToDelete) {
         requireNonNull(tagToDelete);

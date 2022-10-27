@@ -22,6 +22,8 @@ public class NewTagCommand extends Command {
 
     /**
      * Creates a NewTagCommand to add the specified {@code Tag}
+     *
+     * @param tag the tag that will be added to foodRem.
      */
     public NewTagCommand(Tag tag) {
         requireNonNull(tag);

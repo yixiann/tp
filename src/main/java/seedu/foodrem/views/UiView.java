@@ -4,6 +4,7 @@ import static java.util.Objects.requireNonNull;
 
 import seedu.foodrem.model.item.Item;
 import seedu.foodrem.ui.ResultDisplay;
+import seedu.foodrem.viewmodels.FilterByTag;
 import seedu.foodrem.viewmodels.ItemWithMessage;
 import seedu.foodrem.viewmodels.TagToRename;
 import seedu.foodrem.viewmodels.TagsWithMessage;
@@ -50,6 +51,10 @@ public class UiView {
         }
         if (object instanceof TagToRename) {
             display.place(TagToRenameView.from((TagToRename) object));
+            return;
+        }
+        if (object instanceof FilterByTag) {
+            display.place(FilterByTagView.from((FilterByTag) object));
             return;
         }
 

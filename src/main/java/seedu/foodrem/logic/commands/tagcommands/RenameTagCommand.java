@@ -36,11 +36,11 @@ public class RenameTagCommand extends Command {
         requireNonNull(model);
 
         if (!model.hasTag(originalTag)) {
-            throw new CommandException(ERROR_NOT_FOUND);
+            throw new CommandException("This tag does not exist in the FoodRem.");
         }
 
         if (model.hasTag(renamedTag)) {
-            throw new CommandException(ERROR_DUPLICATE);
+            throw new CommandException("This tag name already exists in the FoodRem.");
         }
 
         model.setTag(originalTag, renamedTag);
@@ -53,8 +53,7 @@ public class RenameTagCommand extends Command {
 
     @Override
     public boolean equals(Object other) {
-        return other == this // short circuit if same object
-                // instanceof handles nulls
+        return other == this
                 || (other instanceof RenameTagCommand
                 && originalTag.equals(((RenameTagCommand) other).originalTag)
                 && renamedTag.equals(((RenameTagCommand) other).renamedTag));

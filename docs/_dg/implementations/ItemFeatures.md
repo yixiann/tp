@@ -34,7 +34,7 @@ The related attributes of an item are:
 Regarding the attributes, here are a few things to note:
 
 * The Item value is the `ItemPrice` multiplied by the `ItemQuantity`. This is used for the [Statistics](#statistics-features) feature.
-* Each attribute in `Item` is dependent on a respective `Validator` and `ItemComparator`. `Validator` is an interface that facilitates validation of fields when `Item` is created. `ItemComparator` is `Comparator` that facilitates sorting of items by its respective fields.
+* Each attribute in `Item` is dependent on a respective `Validator` and `ItemComparator`. `Validator` is an interface that facilitates validation of fields when `Item` is created. `ItemComparator` is `Comparator` that facilitates sorting of items by its respective attributes.
 
 ![model_diagram](images/ItemFieldClassDiagram.png)
 
@@ -92,7 +92,7 @@ Here is the activity diagram showing the process of the `edit` command:
 
 ![ItemSequenceDiagram](images/EditItemSequenceDiagram.png)
 
-This diagram excludes the instantiation of the objects that represents attributes in an Item, e.g. `ItemQuantity`, `ItemUnit`. This is because including all of them would cause the UML diagram to be cluttered and too small to read.
+This diagram excludes the instantiation of the objects that represents attributes in an Item, e.g. `ItemQuantity`, `ItemUnit`, when the `EditCommand` object creates an `editedItem`. This is because including all of them would cause the UML diagram to be cluttered and too small to read.
 
 ##### Feature Details
 

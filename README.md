@@ -28,36 +28,36 @@ https://ay2223s1-cs2103t-w16-2.github.io/tp/DeveloperGuide.html
 
 <img src="docs/images/ferusel.png" width="200px">
 
-[[github](https://github.com/ferusel)]
-[[portfolio](team/ferusel)]
+[[Personal Github](https://github.com/ferusel)]
+[[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/ferusel)]
 
 ### Bryan Lim Jing Xiang
 
 <img src="docs/images/bryanljx.png" width="200px">
 
-[[github](https://github.com/bryanljx)]
-[[portfolio](team/bryanljx)]
+[[Personal Github](https://github.com/bryanljx)]
+[[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/bryanljx)]
 
 ### Richard Dominick
 
-<img src="docs/images/richdom2185.png" width="200px">
+<img src="docs/images/richdomlinkedin.png" width="200px">
 
-[[github](https://github.com/RichDom2185)]
-[[portfolio](team/richdom2185)]
+[[Personal Github](https://github.com/RichDom2185)]
+[[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/richdom2185)]
 
 ### Tan Wei Lie Eugene
 
 <img src="docs/images/eugenetanwl3881.png" width="200px">
 
-[[github](https://github.com/eugenetanwl3881)]
-[[portfolio](team/eugenetanwl3881)]
+[[Personal Github](https://github.com/eugenetanwl3881)]
+[[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/eugenetanwl3881)]
 
 ### Tan Yi Xian
 
 <img src="docs/images/yixiann.png" width="200px">
 
-[[github](https://github.com/yixiann)]
-[[portfolio](team/yixiann)]
+[[Personal Github](https://github.com/yixiann)]
+[[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/yixiann)]
 
 ## Acknowledgements
 

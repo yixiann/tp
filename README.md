@@ -12,15 +12,11 @@ FoodRem is an Inventory Management System that empowers small food and beverage 
 
 ## FoodRem User Guide
 
-Here is a link to the User Guide of our application!
-
-https://ay2223s1-cs2103t-w16-2.github.io/tp/UserGuide.html
+Here is the link to our FoodRem [User Guide](https://ay2223s1-cs2103t-w16-2.github.io/tp/UserGuide.html)!
 
 ## FoodRem Developer Guide
 
-Here is a link to the Developer Guide of our application!
-
-https://ay2223s1-cs2103t-w16-2.github.io/tp/DeveloperGuide.html
+Here is the link to our FoodRem [Developer Guide](https://ay2223s1-cs2103t-w16-2.github.io/tp/DeveloperGuide.html)!
 
 ## Project Team
 

@@ -40,7 +40,7 @@ https://ay2223s1-cs2103t-w16-2.github.io/tp/DeveloperGuide.html
 
 ### Richard Dominick
 
-<img src="docs/images/richdom2185.png" width="200px">
+<img src="docs/images/richdomlinkedin.png" width="200px">
 
 [[Personal Github](https://github.com/RichDom2185)]
 [[Project Portfolio Page](https://ay2223s1-cs2103t-w16-2.github.io/tp/team/richdom2185)]

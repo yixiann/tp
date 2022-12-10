@@ -7,11 +7,70 @@
 ## FoodRem
 
 <!-- TODO: Check that this matches {{ site.data.foodrem.about.summary }} -->
+
 FoodRem is an Inventory Management System that empowers small food and beverage (F&B) restaurant managers to manage inventory and obtain insights from inventory data. As a restaurant manager, leverage upon FoodRem's Inventory Management System during your daily operations. Utilize FoodRem's flexible tagging system to help you organize your inventory according to your business needs. Finally, streamline your business decisions by deriving insights from your inventory usage through FoodRem's statistics, keeping track of vital data such as food wastage.
+
+## FoodRem Userguide
+
+Here is a link to the User Guide of our application!
+https://ay2223s1-cs2103t-w16-2.github.io/tp/UserGuide.html
+
+## FoodRem Developerguide
+
+Here is a link to the Developer Guide of our application!
+https://ay2223s1-cs2103t-w16-2.github.io/tp/DeveloperGuide.html
+
+## Project team
+
+### Mai Ting Kai
+
+<img src="images/ferusel.png" width="200px">
+
+[[github](https://github.com/ferusel)]
+[[portfolio](team/ferusel)]
+
+- Role: Team Lead
+
+### Bryan Lim Jing Xiang
+
+<img src="images/bryanljx.png" width="200px">
+
+[[github](https://github.com/bryanljx)]
+[[portfolio](team/bryanljx)]
+
+- Role: Tech Lead
+
+### Richard Dominick
+
+<img src="images/richdom2185.png" width="200px">
+
+[[github](https://github.com/RichDom2185)]
+[[portfolio](team/richdom2185)]
+
+- Role: Tech Lead
+
+### Tan Wei Lie Eugene
+
+<img src="images/eugenetanwl3881.png" width="200px">
+
+[[github](https://github.com/eugenetanwl3881)]
+[[portfolio](team/eugenetanwl3881)]
+
+- Role: Documentation
+
+### Tan Yi Xian
+
+<img src="images/yixiann.png" width="200px">
+
+[[github](https://github.com/yixiann)]
+[[portfolio](team/yixiann)]
+
+- Role: Secretary
 
 ## Acknowledgements
 
 <!-- TODO: Check that this matches {{ site.data.foodrem.acknowledgements }} -->
+
 FoodRem is a brownfield software project based off [AddressBook Level-3](https://se-education.org/addressbook-level3/), taken under the [CS2103T Software Engineering module](https://nus-cs2103-ay2223s1.github.io/website/index.html) held by the School of Computing at the National University of Singapore.
 
 Java dependencies:
